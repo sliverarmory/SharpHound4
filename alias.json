@@ -1,0 +1,26 @@
+{
+    "name": "SharpHound v4",
+    "version": "0.0.0",
+    "command_name": "sharp-hound-4",
+    "original_author": "@BloodHoundAD",
+    "repo_url": "https://github.com/sliverarmory/SharpHound4",
+    "help": "C# based BloodHound Ingestor",
+
+    "entrypoint": "Main",
+    "allow_args": true,
+    "default_args": "-h",
+    "is_reflective": false,
+    "is_assembly": true,
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "SharpHound.exe"
+        },
+        {
+            "os": "windows",
+            "arch": "386",
+            "path": "SharpHound.exe"
+        }
+    ]
+}
