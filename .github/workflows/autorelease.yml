@@ -42,8 +42,7 @@ jobs:
       # Powershell is utter fucking trash.
       run: |
         $Version = git.exe describe --tags --abbrev=0
-        $Version = "`"$Version`""
-        Get-Content -Path alias.json | .\jq.exe ".version |= `"$Version`"" > .\compiled\alias.json
+        Get-Content -Path alias.json | .\jq.exe --arg ver "$Version" '.version |= $ver' > .\compiled\alias.json
         cd .\compiled
         tar.exe -czvf ..\sharp-hound-4.tar.gz .\alias.json .\SharpHound.exe
     - name: Sign Package
